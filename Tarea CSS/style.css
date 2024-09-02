@@ -2,6 +2,7 @@ body{
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 header{
@@ -141,15 +142,57 @@ h1{
 }
 
 section{
-  display: flex; /* Convertimos la sección en un contenedor flex */
-  justify-content: space-between; /* Distribuye los elementos de forma equitativa */
-  align-items: center; /* Alinea los elementos verticalmente al centro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: justify;
 }
 
 .img1{
-  width: 30%; /* Ajusta el ancho de la imagen según tus necesidades */
+  width: 30%;
 }
 
 .img2{
+  width: 30%;
+}
 
+.sidebar{
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 25%;
+  border-right: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.tp{
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+.sidebar{
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 25%;
+  height: 100vh;
+}
+
+.main{
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.container::-webkit-scrollbar{
+  width: 7px;
+}
+
+.container::-webkit-scrollbar-thumb{
+  background-color: #666d;
+  border-radius: 5px;
 }
