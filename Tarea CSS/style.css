@@ -196,3 +196,68 @@ section{
   background-color: #666d;
   border-radius: 5px;
 }
+
+/* Ajustamos el contenedor principal para que tenga un alto máximo y un scroll */
+.container {
+  display: flex;
+  min-height: 100vh;
+  overflow-y: hidden; /* Cambiamos a hidden para que no se muestre el scroll en el contenedor principal */
+}
+
+/* Ajustamos el sidebar para que sea estático */
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 25%;
+  height: 100vh;
+  position: sticky; /* Agregamos position: sticky para que el sidebar se quede fijo */
+  top: 0; /* Agregamos top: 0 para que el sidebar se quede en la parte superior */
+}
+
+/* Ajustamos el main para que tenga un scroll */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Cambiamos a auto para que se muestre el scroll en el main */
+  height: 100vh; /* Agregamos height: 100vh para que el main tenga un alto máximo */
+}
+
+/* Ajustamos el header para que sea estático */
+header {
+  position: sticky; /* Agregamos position: sticky para que el header se quede fijo */
+  top: 0; /* Agregamos top: 0 para que el header se quede en la parte superior */
+  background-color: #f2f2f2;
+  padding: 20px;
+  z-index: 1; /* Agregamos z-index: 1 para que el header se muestre encima del sidebar */
+}
+
+/* Ajustamos el footer para que sea estático */
+footer {
+  position: sticky; /* Agregamos position: sticky para que el footer se quede fijo */
+  bottom: 0; /* Agregamos bottom: 0 para que el footer se quede en la parte inferior */
+  background-color: #f2f2f2;
+  padding: 20px;
+  z-index: 1; /* Agregamos z-index: 1 para que el footer se muestre encima del main */
+}
+
+/* Ajustamos el body para que no tenga scroll */
+body {
+  overflow-y: hidden; /* Agregamos overflow-y: hidden para que no se muestre el scroll en el body */
+}
+
+/* Ajustamos el contenedor principal para que tenga un alto máximo y un scroll */
+.container {
+  display: flex;
+  min-height: 100vh;
+  overflow-y: hidden; /* Cambiamos a hidden para que no se muestre el scroll en el contenedor principal */
+  height: 100vh; /* Agregamos height: 100vh para que el contenedor tenga un alto máximo */
+}
+
+/* Ajustamos el main para que tenga un scroll */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Cambiamos a auto para que se muestre el scroll en el main */
+  height: 100vh; /* Agregamos height: 100vh para que el main tenga un alto máximo */
+  overflow-x: hidden; /* Agregamos overflow-x: hidden para que no se muestre el scroll horizontal en el main */
+}
