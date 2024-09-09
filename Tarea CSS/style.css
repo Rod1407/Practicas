@@ -4,56 +4,45 @@ body{
   padding: 0;
   overflow-x: hidden;
 }
-
 header{
   background-color: #f2f2f2;
   padding: 20px;
 }
-
 .hd{
   display: inline-block;
   margin: 0 10px;
   text-decoration: none;
   color: #333;
 }
-
 .container{
   display: flex;
 }
-
 .sidebar{
   background-color: #f0f0f0;
   padding: 20px;
   width: 25%;
 }
-
 .tp{
   display: block;
   margin-bottom: 10px;
 }
-
 .stp{
   list-style: none;
   padding-left: 20px;
 }
-
 .address{
   font-style: italic;
 }
-
 .ft{
   text-align: center;
 }
-
 .main{
   flex: 1;
   padding: 20px;
 }
-
 section{
   margin-bottom: 20px;
 }
-
 @media(max-width: 768px){
   .container{
     flex-direction: column;
@@ -62,42 +51,34 @@ section{
     width: 100%;
   }
 }
-
 .hd{
   display: inline-block;
   margin: 0 10px;
   text-decoration: none;
   color: #333;
   transition: all 0.3s ease-in-out;
-
 }
-
 .hd:hover{
   color: #007bff;
   transform: scale(1.1);
 }
-
 .img1, .img2{
   width: 100%;
   height: auto;
   transition: transform 0.3s ease-in-out;
   animation: fadeIn 1s ease-in-out;
 }
-
 img{
   width: 300px;
   height: auto;
 }
-
 .img1:hover{
   transform: scale(1.05);
 }
-
 section{
   position: relative;
   overflow: hidden;
 }
-
 section:before{
   content: "";
   position: absolute;
@@ -109,15 +90,12 @@ section:before{
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-
 section:hover::before{
   opacity: 1;
 }
-
 h1{
   text-align: center;
 }
-
 .container_main{
   grid-template-areas:
       "header header"
@@ -125,44 +103,32 @@ h1{
       "sidebar footer"
       "sidebar footer";
 }
-
 .header{
   grid-area: header;
 }
-
 .main{
   grid-area: main;
 }
-
 .sidebar{
   grid-area: sidebar;
 }
-
 .footer{
   grid-area: footer;
 }
-
 section{
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: justify;
 }
-
-.div-img1{
-  width: 30%;
+.img1{
+  width: 300px;
 }
-
-.div-img2{
-  width: 30%;
-}
-
 .img2{
   width: 300px;
   height: 300px;
   border-radius: 50%;
 }
-
 .sidebar{
   background-color: #f0f0f0;
   padding: 20px;
@@ -171,35 +137,94 @@ section{
   font-family: Arial, sans-serif;
   font-size: 16px;
 }
-
 .tp{
   font-weight: bold;
 }
-
 .container{
   display: flex;
   min-height: 100vh;
   overflow-y: scroll;
 }
-
 .sidebar{
   background-color: #f0f0f0;
   padding: 20px;
   width: 25%;
   height: 100vh;
 }
-
 .main{
   flex: 1;
   padding: 20px;
   overflow-y: auto;
 }
-
 .container::-webkit-scrollbar{
   width: 7px;
 }
-
 .container::-webkit-scrollbar-thumb{
   background-color: #666d;
   border-radius: 5px;
+}
+
+/* Ajustamos el contenedor principal para que tenga un alto máximo y un scroll */
+.container {
+  display: flex;
+  min-height: 100vh;
+  overflow-y: hidden; /* Cambiamos a hidden para que no se muestre el scroll en el contenedor principal */
+}
+
+/* Ajustamos el sidebar para que sea estático */
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 25%;
+  height: 100vh;
+  position: sticky; /* Agregamos position: sticky para que el sidebar se quede fijo */
+  top: 0; /* Agregamos top: 0 para que el sidebar se quede en la parte superior */
+}
+
+/* Ajustamos el main para que tenga un scroll */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Cambiamos a auto para que se muestre el scroll en el main */
+  height: 100vh; /* Agregamos height: 100vh para que el main tenga un alto máximo */
+}
+
+/* Ajustamos el header para que sea estático */
+header {
+  position: sticky; /* Agregamos position: sticky para que el header se quede fijo */
+  top: 0; /* Agregamos top: 0 para que el header se quede en la parte superior */
+  background-color: #f2f2f2;
+  padding: 20px;
+  z-index: 1; /* Agregamos z-index: 1 para que el header se muestre encima del sidebar */
+}
+
+/* Ajustamos el footer para que sea estático */
+footer {
+  position: sticky; /* Agregamos position: sticky para que el footer se quede fijo */
+  bottom: 0; /* Agregamos bottom: 0 para que el footer se quede en la parte inferior */
+  background-color: #f2f2f2;
+  padding: 20px;
+  z-index: 1; /* Agregamos z-index: 1 para que el footer se muestre encima del main */
+}
+
+/* Ajustamos el body para que no tenga scroll */
+body {
+  overflow-y: hidden; /* Agregamos overflow-y: hidden para que no se muestre el scroll en el body */
+}
+
+/* Ajustamos el contenedor principal para que tenga un alto máximo y un scroll */
+.container {
+  display: flex;
+  min-height: 100vh;
+  overflow-y: hidden; /* Cambiamos a hidden para que no se muestre el scroll en el contenedor principal */
+  height: 100vh; /* Agregamos height: 100vh para que el contenedor tenga un alto máximo */
+}
+
+/* Ajustamos el main para que tenga un scroll */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Cambiamos a auto para que se muestre el scroll en el main */
+  height: 100vh; /* Agregamos height: 100vh para que el main tenga un alto máximo */
+  overflow-x: hidden; /* Agregamos overflow-x: hidden para que no se muestre el scroll horizontal en el main */
 }
