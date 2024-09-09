@@ -1,0 +1,17 @@
+body {
+    background-image: url('imagenes/insertelink'); /*agregue su img*/
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.fm{
+    background-image: url('imagenes/insertelink'); /*agregue su img*/
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.transparente {
+    background-color: rgba(0, 0, 0, 0);
+}
